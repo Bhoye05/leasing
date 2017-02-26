@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %} 	Rechercher {% endblock%}
+{% load staticfiles %}
+
+{% block content%}
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="ser-title">Recherche d'un bail</h2>
+                    <hr class="botm-line">
+                    <div class="col-md-6 col-sm-6" id="recherche_marque">Recherche par marque
+                        <div class="row">
+                            {% for marque in marques %}
+                                <div class="col-md-4">
+                                    <table id="table_marque">
+                                        <tr>
+
+                                            {% ifequal marque.nom_marque "Peugeot" %}
+                                                <td><a href="rechercher/?marque={{ marque.nom_marque }}"> <img src="{% static 'rachetemonleasing/images/marques/acura.jpg' %}" alt="marque" id="imgMarque"></a> </td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Acura" %}
+                                                 <td> <a href="#"> <img src="{% static 'rachetemonleasing/images/marques/acura.jpg' %}" alt="marque" id="imgMarque"></a> </td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "BMW" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/bmw.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Mercedes" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/mercedes.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Audi" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/audi.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Buick" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/buick.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Cadillac" %}
+                                                 <td><a href="#"> <img src="{% static 'rachetemonleasing/images/marques/cadillac.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Chevrolet" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/chevrolet.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                             {% ifequal marque.nom_marque "Dodge" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/dodge.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Ford" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/ford.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "GMC" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/gmc.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Honda" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/honda.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Hyundai" %}
+                                                 <td><a href="#"> <img src="{% static 'rachetemonleasing/images/marques/hyundai.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Infinity" %}
+                                                 <td><a href="#"> <img src="{% static 'rachetemonleasing/images/marques/infiniti.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Jaguar" %}
+                                                 <td><a href="#"> <img src="{% static 'rachetemonleasing/images/marques/jaguar.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Jeep" %}
+                                                 <td><a href="#"> <img src="{% static 'rachetemonleasing/images/marques/jeep.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Kia" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/kia.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Land Rover" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/land_rover.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Lexus" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/lexus.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Lincoln" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/lincoln.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                            {% ifequal marque.nom_marque "Mazda" %}
+                                                 <td><a href="#"><img src="{% static 'rachetemonleasing/images/marques/mazda.jpg' %}" alt="marque" id="imgMarque"> </a></td>
+                                            {% endifequal %}
+                                        </tr>
+                                    </table>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 marb20">
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $('#francemap').vectorMap({
+                                    map: 'france_fr',
+                                    hoverOpacity: 0.5,
+                                    hoverColor: false,
+                                    backgroundColor: "#ffffff",
+                                    colors: couleurs,
+                                    borderColor: "#000000",
+                                    selectedColor: "#EC0000",
+                                    enableZoom: false,
+                                    showTooltip: true,
+                                    onRegionClick: function(element, code, departement)
+                                    {
+                                        var message = 'Département : "'
+                                            + departement
+                                            + '" || Code : "'
+                                            + code
+                                            + '"';
+
+                                        alert(message);
+                                    }
+                                });
+                            });
+                        </script>
+                        <div id="francemap" style="width: 600px; height: 500px;">
+                            <div id="Recherche_carte">Recherche géographique</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

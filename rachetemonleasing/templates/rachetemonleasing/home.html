@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Accueil
+    {% load static %}
+{% endblock%}
+
+{% block content %}
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="ser-title">Les annones à la  une</h2>
+                    <hr class="botm-line">
+                    <div class="row" id="zoneAnnonce" >
+                        {% for annonce in annonces %}
+                            <div class="col-sm-4">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                    <tr>
+                                        {% ifequal  annonce.vehicule.marque.nom_marque 'Mercedes'%}
+                                            <td><img src="{% static 'rachetemonleasing/images/images_annonces/merco.jpg' %}" alt="marque" id="marque"> </td>
+                                        {% endifequal %}
+                                        {% ifequal  annonce.vehicule.marque.nom_marque 'Peugeot'%}
+                                            <td><img src="{% static 'rachetemonleasing/images/images_annonces/peugeot.jpg' %}" alt="marque" id="marque"> </td>
+                                        {% endifequal %}
+                                        <td>
+                                            {{ annonce.vehicule.marque.nom_marque }} {{ annonce.vehicule.marque.modele }}<br>
+                                            mois restants {{ annonce.mois_restants }}<br>
+                                            payement restant {{ annonce.paiement_restant}} euros
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

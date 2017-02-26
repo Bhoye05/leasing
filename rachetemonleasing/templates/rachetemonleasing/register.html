@@ -1,0 +1,57 @@
+{% extends "base.html" %} 
+
+{%block title %} Création d'un utilisateur {% endblock %}
+
+ 
+ {% block content%}
+
+
+<section id="contact" class="section-padding">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="ser-title">Inscription</h2>
+                <hr class="botm-line">
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <h3>Renseignez tous les champs</h3>
+                <div class="space"></div>
+            </div>
+            <div class="col-md-8 col-sm-8 marb20">
+                <div class="connexion-form">
+                    <form class="form-horizontal" action="" method="POST" id="connection_form">
+                        {% csrf_token %}
+                        {% load bootstrap %}
+                        {{ user_form|bootstrap_horizontal:'col-lg-6'}}
+                        {{ personne_form|bootstrap_horizontal:'col-lg-6'}}
+                        <input type="submit" value="Submit" class="btn btn-primary" id="validation_connexion">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{#		<div class="container">#}
+{#			<div class="row">#}
+{#				<div class="col-md-12">#}
+{#					<h2 class="ser-title">Inscrivez vous avec ce formulaire</h2>#}
+{#					<hr class="botm-line">#}
+{#				</div>#}
+{#				<div class="col-md-4 col-sm-4">#}
+{#			      <h3>Tous les champs sont obligatoires</h3>#}
+{#			      <div class="space"></div>#}
+{#			    </div>#}
+{#                <div class="col-md-8 col-sm-8 marb20">#}
+{#                    <form class="form-horizontal" action="" method="POST" id="inscription_form">#}
+{#                        {% csrf_token %}#}
+{#                        {% load bootstrap %}#}
+{#                        {{ user_form|bootstrap_horizontal}}#}
+{#                        {{ personne_form|bootstrap_horizontal}}#}
+{#                       <input type="submit" value="Submit" class="btn btn-primary" id="validation">#}
+{#                    </form>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+</section>
+{% endblock %}

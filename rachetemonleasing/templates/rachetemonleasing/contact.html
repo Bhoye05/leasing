@@ -1,0 +1,42 @@
+{% extends "base.html" %} 
+
+{%block title %} Contact {% endblock %}
+
+{% block content%}
+
+<section id="contact" class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="ser-title">Contactez nous</h2>
+					<hr class="botm-line">
+				</div>
+				<div class="col-md-4 col-sm-4">
+			      <h3>Contact Info</h3>
+			      <div class="space"></div>
+			      <h3><i class="glyphicon-home " ></i> 9 rue henri bergson<br>
+			        Angers/Maine et Loire 49000</h3>
+			      <div class="space"></div>
+			      <h3><span class="glyphicon-envelope"></span> info@companyname.com</h3>
+			      <div class="space"></div>
+			      <h3><i class="glyphicon-phone-alt"></i> 0695504372</h3>
+			    </div>
+				<div class="col-md-8 col-sm-8 marb20">
+					<div class="contact-info">
+							<h3 class="cnt-ttl" id="question">Vous avez une question, n'attendez pas</h3>
+							<div class="space"></div>
+                            <div id="sendmessage">{{ request.session.messageEnvoye }}</div>
+                            <div id="errormessage"></div>
+                    </div>
+                    <form action="" method="post" role="form" class="contactForm">
+                        {% csrf_token %}
+                        {% load bootstrap %}
+                        {{ messageForm|bootstrap_horizontal}}
+                        <button type="submit" id="valider_message" class="btn btn-primary">Envoyer</button>
+                    </form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{%block title %} Authentification {% endblock %}
+
+{% block content%}
+    {% load bootstrap %}
+
+
+<section id="contact" class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="ser-title">Connectez vous</h2>
+					<hr class="botm-line">
+				</div>
+				<div class="col-md-4 col-sm-4">
+			      <h3>Identifiants de connexion</h3>
+			      <div class="space"></div>
+			    </div>
+                <div class="col-md-8 col-sm-8 marb20">
+                    <div class="connexion-form">
+                                <form class="form-horizontal" action="" method="POST" id="connection_form">
+                                     {% csrf_token %}
+                                    {{ logForm|bootstrap_horizontal:'col-lg-6' }}
+                                    <input type="submit" value="Submit" class="btn btn-primary" id="validation_connexion">
+                                </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+{% endblock %}

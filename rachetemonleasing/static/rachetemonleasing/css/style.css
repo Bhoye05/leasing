@@ -1,0 +1,184 @@
+/*BANNIERE */
+
+
+/*LOGO*/
+#logo
+{
+	width: 300px;
+	height: 150px;
+	border: 2px solid black;
+}
+
+#slogan
+{
+  margin-left: 800px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 40px;
+  font: bold 14px/25px Arial, Helvetica;
+  color: white;
+  font-size: x-large;
+  font-style: italic;
+  
+}
+
+#banniere{
+    border-bottom: 1px solid black;
+    background-color: #f57900;
+    height: 150px;
+    width: 100%;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    
+}
+
+#baniere_navbar{
+	background: #A52A2A;
+}
+
+#navigationBar{
+	
+}
+
+#content
+{
+	margin: 15px;
+/* 	background: #F0F8FF;  */
+    min-height: 20%;
+}
+
+#Recherche_carte{
+	margin: 5px;
+	width: 300px;
+	font: bold 18px/25px Arial, Helvetica;
+	color: red;
+	font-style: italic;
+	margin-left: 50px;
+	
+}
+
+/* Boutons de validations*/
+#validation{
+	margin-left: 380px;
+}
+
+#validation_connexion{
+	margin-left: 390px;
+}
+
+#validation_annonce{
+    margin-top: 40px;
+	margin-left: 150px;
+}
+
+#valider_message{
+	margin-left: 140px;
+}
+
+#inscription_form{
+	margin-top: 20px;
+	margin-right: 60%;
+	
+}
+/*fin boutons de validation*/
+
+/**/
+#question{
+    margin-left: 140px;
+}
+
+#sendmessage{
+    margin-left: 140px;
+    text-decoration-color: green;
+}
+
+
+/**/
+
+#connection_form
+{
+	/*margin-top: 20px;
+	margin-right: 60%;*/
+}
+
+#recherche_marque
+{
+
+	font: bold 18px/25px Arial, Helvetica;
+	color: red;
+	font-style: italic;
+
+}
+
+#donnees
+{
+	border: 1px gray solid;
+	min-width: 70px;
+	background: white;
+	height: 50px;
+	margin-left: 55px;
+}
+
+#recheche_type
+{
+	margin: 5px;
+	width: 300px;
+	font: bold 18px/25px Arial, Helvetica;
+	color: red;
+	font-style: italic;
+	margin-left: 5px;
+}
+
+#imge{
+	width: 40px;
+	height: 40px;
+}
+
+#table_marque
+{
+	margin-left: 60px;
+}
+
+#colonne_milieu
+{
+	
+}
+
+#annonce{
+	width: 500px;
+}
+
+#gras
+{
+	font-size: x-large;
+	color: blue;
+}
+
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+
+#zoneAnnonce{
+	height: 105px;
+}
+
+#marque{
+    width: 150px;
+    height: 90px;
+}
+
+#imgMarque{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+#footer{
+    height: 100px;
+    margin-top: 90%;
+}

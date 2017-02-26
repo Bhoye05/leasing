@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	   <title>
+           {% load bootstrap %}
+		   {% block title %}   Reprise leasing  {% endblock %}
+		   {% load static %}
+		   {% load custom_filter %}
+
+	   </title>
+	   <meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+       <link rel="stylesheet" type="text/css"  href="{% static 'rachetemonleasing/css/style.css' %}">
+  	   <link href="{% static 'rachetemonleasing/css/jqvmap.css' %}" media="screen" rel="stylesheet" type="text/css" />
+	   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	   <script src="{% static 'rachetemonleasing/javascript/jquery.vmap.js' %}" type="text/javascript"></script>
+	   <script src="{% static 'rachetemonleasing/javascript/jquery.vmap.france.js' %}" type="text/javascript"></script>
+	   <script src="{% static 'rachetemonleasing/javascript/jquery.vmap.colorsFrance.js' %}" type="text/javascript"></script>
+
+	</head>
+	<body id="{% block bodyId %}corps{% endblock %}">
+		<section id="baniere_navbar">
+			<header id="banniere">
+				<img src="{% static 'rachetemonleasing/images/logo.jpg' %}"
+					alt="Mon image" id="logo" /> <span id="slogan">Rachetemonleasing</span>
+			</header>
+			<nav id="navigationBar">
+				{% block nav %}
+				<div id="barNavigation">
+					<nav class="navbars navbar-inverse">
+						<div class="container-fluid">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="accueil">Home</a></li>
+								<li><a href="annonce">Proposer</a></li>
+								<li><a href="rechercher">Rechercher</a></li>
+								<li><a href="contact">Contact</a></li>
+							</ul>
+							{% if request.user.is_authenticated %}
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href="#">{{request.user.username  }} <span class="glyphicon glyphicon-user"></span></a></li>
+									<li><a href="deconnexion"><span class="glyphicon glyphicon-log-out"></span>
+											Deconnexion</a></li>
+								</ul>
+							{% else %}
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href="register"><span class="glyphicon glyphicon-user"></span>
+											Inscription</a></li>
+									<li><a href="connexion"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+								</ul>
+							{% endif %}
+						</div>
+					</nav>
+
+				</div>
+
+				{% endblock %}
+
+			</nav>
+		</section>
+        <section id="content">
+            {% block content%}
+
+
+            {% endblock %}
+
+        </section>
+
+        <section id="footer">
+            <div class="panel-footer">Panel Footer</div>
+        </section>
+	</body>
+</html>
